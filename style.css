@@ -1,0 +1,93 @@
+::-webkit-scrollbar{
+    width: 10px;
+    background  : #3f7b70;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(170, 238, 0);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(170,238,0,.6);
+}
+*{
+margin :0; padding : 0; box-sizing: border-box;
+}
+body{
+    background-color: #98acf8;
+}
+.generator-wrapper{
+    max-width: 550px;
+    margin : 5rem auto;
+    height: 65vh;
+    padding: 2rem;
+    background-color: #eee;
+    border-radius :6px;
+}
+.generator{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+input {
+    outline : 0;
+    border : 0;
+    border-bottom : 4px solid #b088f9;
+    padding : 0.75rem;
+    width : 65%;
+    border-radius: 4px;
+    font-size : 1.1rem;
+}
+button#create{
+    padding : .7rem .9rem;
+    font-weight: 600;
+    background-color: #3f7b70;
+    color : white;
+    border-radius: 4px;
+    cursor: pointer;
+    border : 0 ;
+    font-size :1.05rem;
+}
+button#clear{
+    padding : .7rem .9rem;
+    font-weight: 600;
+    background-color: #f96d00;
+    color : white;
+    border-radius: 4px;
+    cursor: pointer;
+    border : 0 ;
+    font-size: 1.05rem;
+}
+.list {
+    margin-top: 2rem;
+    height: 70%;
+    overflow-y : auto;
+    scrollbar-width: 5px;
+    
+}
+.list .item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    margin-right : 1rem;
+    font-size : 1.1rem;
+}
+.remove{
+    cursor: pointer;
+}
+h2{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.item {
+    animation : slide .9s ease;
+}
+@keyframes slide{
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
