@@ -6,7 +6,7 @@ create.addEventListener("click",()=>{
     for(let i=1;i<=5;i++){
         let x = generator();
         let d = document.createElement("div");
-        d.innerHTML +=" <div  id='"+id+"' class='item' ><span> " + x + " </span> <span onclick='remove(this)'; class='remove'> &times; </span></div>" ;
+        d.innerHTML +=" <div  id='"+id+"' class='item' ><span> " + x + " </span>  <div> <span class='copy' onclick='copy(this)'>  Copy </span>  <span onclick='remove(this)' class='remove'> &times;  </span>  </div> </div>" ;
         document.querySelector(".list").prepend(d);
         id++;
     }
@@ -33,8 +33,15 @@ const  generator = () =>{
 // //   (; ((
 
 function remove (e) {
-      e.parentElement.remove();
+      e.parentElement.parentElement.remove();
 }
 document.getElementById('clear').addEventListener("click",()=>{
     document.querySelector(".list").innerHTML = "";
 })
+
+function copy(e){
+     e.innerHTML = "Copied";
+     setTimeout(()=>{
+         e.innerHTML="Copy";
+     },1000)
+}

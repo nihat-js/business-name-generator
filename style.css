@@ -91,3 +91,6 @@ h2{
         transform: translateY(0);
     }
 }
+.copy{
+    cursor: pointer;
+}
